@@ -49,8 +49,7 @@ minNumber(38, 67);
  */
 
 function randomNumber() {
-   
-   return (Math.floor(Math.random() * 10));
+  return Math.floor(Math.random() * 10);
 }
 
 randomNumber();
@@ -62,11 +61,12 @@ randomNumber();
  * returns an opposite number
  */
 
- function getOppositeNumber(number){
-     return (-number)
- }
+function getOppositeNumber(number) {
+  return -number;
+}
 
 getOppositeNumber(5);
+
 // Exercise 1
 describe("greet", () => {
 	test("should return a string with a name", () => {
