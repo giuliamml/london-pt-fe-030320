@@ -23,7 +23,7 @@ describe("getEvenNumbers", () => {
 
 	test("getEvenNumbers returns even integers only", () => {
 		const param = [34, 12, 64, 1, 5, 2, 8, 0];
-		expect(getEvenNumbers(param)).toEqual([34, 12, 64, 2, 8]);
+		expect(getEvenNumbers(param)).toEqual([34, 12, 64, 2, 8, 0]);
 	});
 
 	test("getEvenNumbers returns empty array", () => {
