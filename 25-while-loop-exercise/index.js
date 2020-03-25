@@ -10,14 +10,12 @@ let count = 10; // DO NOT TOUCH THIS LINE :)
  */
 
 function countdown() {
-    while (count > 0) {
-    
+  while (count > 0) {
     console.log(`Remaining: ${count}`);
     count--;
   }
-  console.log('Go!')
+  console.log("Go!");
 }
-
 
 // ==========================
 
@@ -29,19 +27,15 @@ function countdown() {
  * that it takes any number as a param and count from that point
  */
 
- function countdownWithParam(count){
-     
-    while (count > 0) {
-        console.log(`Remaining: ${count}`);
-        count--;
-      }
-    
-      console.log('Go!')
+function countdownWithParam(count) {
+  while (count > 0) {
+    console.log(`Remaining: ${count}`);
+    count--;
+  }
 
-      
-     
- } 
- 
+  console.log("Go!");
+}
+
 // ==========================
 
 let ruler = [];
@@ -59,10 +53,7 @@ function rulerConstructor() {
   while (newRuler < 100) {
     newRuler += 10;
     ruler.push(newRuler);
-    
   }
-  
-  
 }
 // ==========================
 
@@ -84,4 +75,3 @@ function partyPadding(partyArray) {
   return partyArray;
 }
 partyPadding(partyArray);
-

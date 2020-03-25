@@ -12,17 +12,16 @@
  */
 
 function getIntegersOnly(array) {
-    var newArray = [];
+  var newArray = [];
   for (const value of array) {
-      if (value % 1 == 0 && typeof(value) == 'number') {
-        newArray.push(value);
-      }
-
+    if (value % 1 == 0 && typeof value == "number") {
+      newArray.push(value);
+    }
   }
 
   return newArray;
 }
-getIntegersOnly([2, 5, 1.5])
+getIntegersOnly([2, 5, 1.5]);
 /**
  * Exercise 2
  * create a function {getEvenNumbers}, which takes an array of integers
@@ -30,19 +29,17 @@ getIntegersOnly([2, 5, 1.5])
  * integers it should return an empty array
  */
 function getEvenNumbers(array) {
-    var newArray = [];
+  var newArray = [];
   for (const value of array) {
     if (value % 2 === 0) {
-        newArray.push(value);
+      newArray.push(value);
     }
-    
-   
   }
 
   return newArray;
 }
 //getEvenNumbers([0, 5, 1.5]);
-console.log(getEvenNumbers([0, 5, 1.5]))
+console.log(getEvenNumbers([0, 5, 1.5]));
 
 /**
  * Exercise 3
@@ -52,35 +49,31 @@ console.log(getEvenNumbers([0, 5, 1.5]))
  * a new array with even numbers only, if there is no even integers it
  * should return an empty array
  */
-function getEvenNumbersFromMixedArray(array){
-    var newArray = [];
-    for ( const value of array ){
-        if (value % 2 === 0 && typeof(value) == 'number'){
-           
-            newArray.push(value);
-        } 
-       
+function getEvenNumbersFromMixedArray(array) {
+  var newArray = [];
+  for (const value of array) {
+    if (value % 2 === 0 && typeof value == "number") {
+      newArray.push(value);
     }
-    return newArray;
+  }
+  return newArray;
 }
 
-getEvenNumbersFromMixedArray([-3, 2, 5, 1.5])
+getEvenNumbersFromMixedArray([-3, 2, 5, 1.5]);
 /**
  * Exercise 4
  * create a function {getOddNumbers}, which takes an array of integers
  * and returns a new array with odd numbers only, if there is no odd
  * integers it should return an empty array
  */
-function getOddNumbers(array){
-    var newArray = [];
-    for (const value of array){
-        if (value % 2 !== 0 && typeof(value) == 'number'){
-            newArray.push(value);
-        }
-        
-        
+function getOddNumbers(array) {
+  var newArray = [];
+  for (const value of array) {
+    if (value % 2 !== 0 && typeof value == "number") {
+      newArray.push(value);
     }
-    return newArray;
+  }
+  return newArray;
 }
 
 getOddNumbers([1, 2, 3, 4]);
@@ -93,15 +86,15 @@ getOddNumbers([1, 2, 3, 4]);
  * If your param is [1,2,3,4,5] the result should be
  * [2,1,4,3,6]
  */
-function evenOddTransform(array){
-    let newArray = [];
-    for ( const value of array){
-        if (value % 2 !== 0){
-            newArray.push(value + 1);
-        } else {
-            newArray.push(value - 1);
-        }
+function evenOddTransform(array) {
+  let newArray = [];
+  for (const value of array) {
+    if (value % 2 !== 0) {
+      newArray.push(value + 1);
+    } else {
+      newArray.push(value - 1);
     }
-    return newArray
+  }
+  return newArray;
 }
-evenOddTransform([1,2,3,4,5]);
+evenOddTransform([1, 2, 3, 4, 5]);
