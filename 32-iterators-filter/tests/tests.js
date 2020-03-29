@@ -158,10 +158,6 @@ describe("truthyOnly", () => {
 		expect(truthyOnly(param1)).toEqual([
 			"kitten",
 			{},
-<<<<<<< Updated upstream
-			0,
-=======
->>>>>>> Stashed changes
 			{ name: "Alex" },
 			["pet"],
 			26
