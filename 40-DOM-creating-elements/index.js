@@ -9,6 +9,9 @@
  *
  * NOTE: we will use this function for other exercises.
  */
+function createDOMElement(tagName) {
+  return document.createElement(tagName);
+}
 
 /**
  * Exercise 2
@@ -17,7 +20,11 @@
  * create a "p" tag which displays the text and appends it to
  * the body of the document
  */
-
+function addPTag(text) {
+  var el = document.createElement("p");
+  el.innerText = text;
+  document.body.append(el);
+}
 /**
  * Exercise 3
  *
@@ -26,7 +33,12 @@
  * which displays the text and has the class and appends
  * the element to the body
  */
-
+function addElementWithClass(tagName, text, className) {
+  var el = document.createElement(tagName);
+  el.innerText = text;
+  el.className = className;
+  document.body.append(el);
+}
 /**
  * Exercise 4
  *
@@ -34,7 +46,12 @@
  * text and an array of classes. Create an element which displays the
  * text, has the array of classes and append it to the body
  */
-
+function addElementWithMultipleClasses(tagName, text, classesArray) {
+  var el = document.createElement(tagName);
+  el.innerText = text;
+  classesArray.forEach((c) => el.classList.add(c));
+  document.body.append(el);
+}
 /**
  * Exercise 5
  *
@@ -45,8 +62,21 @@
  *
  * Each li should have the text "Item $" (where $ is it's position)
  * Add the list element to the body
+ *
  */
 
+function buildAList(tagType, className, elementsNumber) {
+  el = document.createElement(tagType);
+  el.className = className;
+
+  for (let i = 0; i < elementsNumber; i++) {
+    li = document.createElement("li");
+    li.innerText = `Item ${i}`;
+
+    el.append(li);
+  }
+  document.body.append(el);
+}
 /**
  * Exercise 6
  * !!! to test this function in your browser, first run {buildAList} !!!
@@ -60,7 +90,12 @@
  * FIRST item in the list.
  *
  */
-
+function prependLiToList(text, className) {
+  var li = document.createElement("li");
+  li.innerText = text;
+  li.className = className;
+  el.prepend(li);
+}
 /**
  * Exercise 7
  * !!! to test this function in your browser, first run {buildAList} !!!
@@ -73,7 +108,13 @@
  * Add the li into the list at the position passed to this function.
  *
  */
-
+function pushToSelectedPosition(text, className, index) {
+  ul = document.querySelector("ul");
+  li = document.createElement("li");
+  li.innerText = text;
+  li.className = className;
+  ul.insertBefore(li, ul.children[index]);
+}
 /**
  * Exercise 8
  *
@@ -84,3 +125,8 @@
  * element which match the element selector
  *
  */
+function deleteSelectedElements(parentSelector, childSelector) {
+  parentElement = document.querySelector(parentSelector);
+  childSelector = document.querySelectorAll(childSelector);
+  childSelector.forEach((el) => parentElement.removeChild(el));
+}

@@ -25,6 +25,7 @@ describe("appendToTitle", () => {
 
 	test("appendToTitle should append text to h1", () => {
 		const h1 = document.querySelector("h1");
+		setTitle("Test");
 		appendToTitle(" Test");
 
 		expect(h1.innerText).toEqual("Test Test");
@@ -129,7 +130,7 @@ describe("disableBtns", () => {
 		const submitBtns = document.querySelectorAll(".submit");
 
 		submitBtns.forEach(btn => expect(btn.disabled).toBe(false));
-		disableBtns("submit");
+		disableBtns(".submit");
 		submitBtns.forEach(btn => expect(btn.disabled).toBe(true));
 	});
 });

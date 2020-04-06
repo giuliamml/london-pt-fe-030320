@@ -150,14 +150,14 @@ describe("every", () => {
 
   test("every invokes callback with each element and index", () => {
     every(numbers, logArgs);
-    expect(logArgs).toHaveBeenCalledTimes(1);
+    expect(logArgs).toHaveBeenCalledTimes(numbers.length);
     expect(logArgs).toHaveBeenCalledWith(numbers[0], 0);
   });
 
   test("every returns a boolean representing that callback returned truthy for every element", () => {
     const allAreEven = every(numbers, isEven);
     expect(typeof allAreEven).toEqual("boolean");
-    expect(isEven).toHaveBeenCalledTimes(1);
+    expect(isEven).toHaveBeenCalledTimes(numbers.length);
     expect(allAreEven).toEqual(numbers.every(isEven));
 
     const allAreLong = every(strings, longerThan2);
