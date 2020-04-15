@@ -41,14 +41,12 @@ function createTimerEl(localTimersCount) {
       `div.timer_${localTimersCount} button.reset`
     );
 
-    //TODO: what is this event loop doing
-    //which scope can it access
     resetButton.addEventListener("click", function resetTimer() {
       clearInterval(myTimer);
       allTimers = Array.from(document.querySelectorAll("div.timers>div"));
-      currentIdx = allTimers.findIndex(el => el === timer);
+      currentIdx = allTimers.findIndex((el) => el === timer);
       myTimer = setTimer(currentIdx);
-      console.log()
+      console.log();
     });
 
     stopButton = document.querySelector(
@@ -66,7 +64,7 @@ function createTimerEl(localTimersCount) {
       console.log("global: ", timersCount, timer);
       timersCount--;
 
-      //renaming action
+      //renaming new timer added
       allTimers = Array.from(document.querySelectorAll("div.timers>div"));
       allTimers.forEach((timer, idx) => {
         timer.classList = `timer timer_${idx}`;
