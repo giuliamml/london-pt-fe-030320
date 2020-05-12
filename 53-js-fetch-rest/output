@@ -1,0 +1,52 @@
+
+> test-exercise@1.0.0 test /Users/giuliamummolo/london-pt-fe-030320/53-js-fetch-rest
+> npm run concat && jest
+
+
+> test-exercise@1.0.0 concat /Users/giuliamummolo/london-pt-fe-030320/53-js-fetch-rest
+> concat -o ./tests/index.test.js ./tests/setup.js ./index.js ./tests/tests.js 
+
+  console.log
+    this is the comment { body: 'Comment added', id: 9 }
+
+      at tests/index.test.js:62:27
+
+  console.log
+    this is the data [
+      { body: 'new comment', id: 2 },
+      { body: 'comment 2', id: 3 },
+      { body: 'Comment 2', id: 4 },
+      { body: 'Comment 2', id: 5 },
+      { body: 'Comment added', id: 6 },
+      { body: 'Comment added', id: 7 },
+      { body: 'Comment added', id: 8 },
+      { body: 'Comment added', id: 9 }
+    ]
+
+      at tests/index.test.js:33:27
+
+  console.log
+    this is the comment {}
+
+      at tests/index.test.js:90:27
+
+  console.log
+    Deleted
+
+      at tests/index.test.js:138:23
+
+  console.log
+    this is the comment {}
+
+      at tests/index.test.js:90:27
+
+  console.log
+    this is the comment {}
+
+      at tests/index.test.js:115:27
+
+  console.log
+    Deleted
+
+      at tests/index.test.js:138:23
+

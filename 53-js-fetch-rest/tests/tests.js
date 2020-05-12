@@ -2,7 +2,6 @@ describe("HTTP requests", () => {
   // Exercise 1
   test("getComments should resolve with an array of comments", async () => {
     const data = await getComments();
-
     expect(Array.isArray(data)).toBe(true);
   });
 
@@ -24,9 +23,7 @@ describe("HTTP requests", () => {
   test("patchComment should modify one comment", async () => {
     const oldComments = await getComments();
     const firstComment = oldComments[0];
-
     const updated = await patchComment(firstComment, "Update this comment");
-
     const newComments = await getComments();
     const newFirstComment = newComments[0];
 
