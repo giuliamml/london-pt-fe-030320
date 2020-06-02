@@ -1,5 +1,10 @@
 import React from "react";
 import "./App.css";
+import Navigation from './navigation.js';
+import Header from './header.js';
+import Form from './form.js'
+import Content from './content.js'
+import Footer from './footer.js'
 
 /**
  * Exercises:
@@ -14,7 +19,13 @@ import "./App.css";
  */
 
 function App() {
-	return <div className="App"></div>;
+	return <div className="App">
+		<Navigation />
+		<Header />
+		<Form />
+		<Content />
+		<Footer />
+	</div>;
 }
 
 export default App;
