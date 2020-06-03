@@ -1,0 +1,41 @@
+.App {
+  width: 100%;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+button.newCounter {
+  background-color: black;
+  width: 100px;
+  height: 50px;
+  color: violet;
+  left: 50%;
+  position: absolute;
+  border: none;
+}
+
+.counter {
+  height: 300px;
+  width: 300px;
+  background-color: wheat;
+  color: violet;
+  position: relative;
+  left: 5%;
+  right: 5%;
+  margin-top: 10%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8em;
+}
+
+.btn {
+  background-color: black;
+  color: violet;
+  border: none;
+  position: relative;
+  right: -50%;
+  transform: translateX(-50%);
+  margin-top: 20%;
+}
