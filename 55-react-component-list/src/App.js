@@ -17,7 +17,21 @@ const APP_TITLE = "Awesome Pet Shop";
 const App = () => {
   const animals = ["cat", "dog", "giraffe", "pig", "lion", "rabbit"];
 
-  return <div className="app"></div>;
+  var today = new Date();
+  var date =
+    today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
+
+  return (
+    <div className="wrapper">
+      <p>{date}</p>
+      <h1>{APP_TITLE}</h1>
+      <ul className="animals_list">
+        {animals.map((animal) => {
+          return <li key={animal}>{animal}</li>;
+        })}
+      </ul>
+    </div>
+  );
 };
 
 export default App;
