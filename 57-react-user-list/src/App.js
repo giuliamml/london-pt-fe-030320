@@ -39,32 +39,34 @@ function App() {
       <div className="users">
         {" "}
         {users.map((user, index) => (
-          <div key={index} className="user">
-            <div className="name">
-              <div className="imageWrapper">
-                <img src={user.picture.large} alt="" />
+          <li>
+            <div key={index} className="user">
+              <div className="name">
+                <div className="imageWrapper">
+                  <img src={user.picture.large} alt="" />
+                </div>
+                <h3>
+                  {user.name.title} {user.name.first} {user.name.last}
+                </h3>
               </div>
-              <h3>
-                {user.name.title} {user.name.first} {user.name.last}
-              </h3>
-            </div>
 
-            <div className="details">
-              <h3>Phone number:</h3>
-              <p>{user.phone}</p>
-              <h3>Email address:</h3>
-              <p>{user.email}</p>
-              <h3>Address:</h3>
-              <p>
-                {user.location.street.number} {user.location.street.name}
-              </p>
-              <p>{user.location.city}</p>
-              <p>{user.location.country}</p>
+              <div className="details">
+                <h3>Phone number:</h3>
+                <p>{user.phone}</p>
+                <h3>Email address:</h3>
+                <p>{user.email}</p>
+                <h3>Address:</h3>
+                <p>
+                  {user.location.street.number} {user.location.street.name}
+                </p>
+                <p>{user.location.city}</p>
+                <p>{user.location.country}</p>
+              </div>
+              <div className="button">
+                <button onClick={() => removeUser(index)}>REMOVE USER</button>
+              </div>
             </div>
-            <div className="button">
-              <button onClick={() => removeUser(index)}>REMOVE USER</button>
-            </div>
-          </div>
+          </li>
         ))}
       </div>
     </div>
