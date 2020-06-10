@@ -18,10 +18,45 @@ import "./App.css";
  */
 
 const App = () => {
-	return (
-		<div className="App">
-		</div>
-	);
+  const [users, setUser] = useState([]);
+  const [selectedUser, setSelectedUSer] = useState("All");
+
+  const fetchData = async () => {
+    if (users !== []) {
+      const fetchData = await fetch(
+        "http://localhost:3001/contacts"
+      ).then((response) => response.json());
+
+      setUser([...fetchData, ...users]);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const filteredUsers =
+    selectedUser === "All"
+      ? users
+      : users.filter((user) => user.name.match(selectedUser));
+
+  const handleChange = (event) => {
+    setSelectedUSer(event.target.value);
+  };
+
+  return (
+    <div className="App">
+      <input type="text" onChange={handleChange} />
+      <ul>
+        {filteredUsers.map((el) => (
+          <li>
+            <p>{el.name}</p>
+            <p className={"Company"}>{el.company}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default App;
